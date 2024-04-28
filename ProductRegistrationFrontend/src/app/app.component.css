@@ -1,0 +1,17 @@
+.toolbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .toolbar-title {
+    font-size: 1.5rem; /* Tamanho da fonte do título */
+  }
+  
+  .content-container {
+    padding: 20px; /* Adicione espaçamento ao redor do conteúdo */
+  }
+  
+  .page-title{
+    padding-left: 10px;
+  }

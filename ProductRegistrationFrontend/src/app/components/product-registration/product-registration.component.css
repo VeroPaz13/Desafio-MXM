@@ -1,0 +1,29 @@
+h4{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: gray;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexible-button {
+    padding: 12px 24px;
+    font-size: 20px;
+    border: 2px solid #1976D2;
+    border-radius: 8px;
+    background-color: #1976D2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.input-container{
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 90%; 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+}

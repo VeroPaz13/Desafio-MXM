@@ -1,0 +1,42 @@
+<div>
+   @if(isEdit){
+       <h4>Editar cadastro do produto</h4>
+   }@else {
+       <h4>Cadastro de produtos</h4>
+   }
+    <form [formGroup]="productForm" (ngSubmit)="registration()">
+        @if(!isEdit){
+            <div class="input-container">
+                <mat-form-field class="input-container">
+                    <mat-label>ID</mat-label>
+                    <input type="number" matInput placeholder="ID" formControlName="id">
+                  </mat-form-field>
+            </div>            
+        }
+        <div class="input-container">
+            <mat-form-field class="input-container">
+                <mat-label>Nome do produto</mat-label>
+                <input type="text" matInput placeholder="Nome do produto" formControlName="name">
+              </mat-form-field>
+        </div>
+        <div class="input-container">
+            <mat-form-field class="input-container">
+                <mat-label>Preço</mat-label>
+                <input type="number" matInput placeholder="Preço" step="0.01" formControlName="price">
+              </mat-form-field>
+        </div>
+        <div class="input-container">
+            <mat-form-field class="input-container">
+                <mat-label>Quantidade</mat-label>
+                <input type="number" matInput placeholder="Quantidade" formControlName="quantity">
+              </mat-form-field>
+        </div>
+        <div class="button-container">
+            @if (isEdit) {
+                <button class="flexible-button" mat-raised-button color="primary" [disabled]="!productForm.valid">Atualizar</button>
+            }@else {
+                <button class="flexible-button" mat-raised-button color="primary" [disabled]="!productForm.valid">Cadastrar</button>
+            }
+        </div>
+    </form>
+</div>
